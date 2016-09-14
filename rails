@@ -1,0 +1,74 @@
+rails new [app_name] :: プロジェクト生成(バージョンを指定する場合は rails _version_ new app_name)
+rails server --port=3000 --binding=localhost :: サーバー起動(ポート指定 --port、ID指定 --binding)
+rails server --debugger --port=3000 --binding=localhost :: サーバー起動(ポート指定 --port、ID指定 --binding)
+rails server --debugger :: デバッッグモードでサーバー起動
+rails server --daemon :: デーモンでサーバー起動
+rails server --environment=development :: サーバー起動(test/development/production)
+rails console :: コンソールを起動
+rails console --debugger :: デバッグモードでコンソールを起動
+rails console --sandbox :: sandobxでコンソールを起動(DBをロールバックする)
+rails dbconsole test ::
+rails dbconsole development ::
+rails dbconsole production ::
+rails generate scaffold [MODEL_NAME] [column_name:type] ::
+rails generate model [ModelName] [column_name:type] :: 
+rails generate controller [ControllerName] [action_name] :: 
+rails generate scaffold_controller [ModelName] :: モデル作成済みの場合に使用
+rails generate migration [AddColumnToModels] [column_name:type] ::
+rails generate migration [RemoveColumnFromModels] [column_name:type] ::
+rails generate integration_test [TestName] :: 複数のアクションやコントローラにまたがる挙動を検証するためのテスト
+rails destroy scaffold [ModelName] :: Scaffoldで生成したファイルの削除
+rails destroy controller [ControlerName] [action_name] :: コントローラの削除
+rails destroy model [ModelName] :: モデルの削除
+
+rake -T :: タスク一覧
+rake about :: 使用しているライブラリのバージョンを確認
+rake doc:app :: ソースからドキュメントを生成(doc/app)
+rake doc.rails :: Railsのドキュメントを生成
+rake notes :: ソースないの「FIXME,OPTIMIZE,TODO」を検索して表示
+rake rails:update :: Rasilのバージョンアップ
+rake rails:templates:copy :: 自動生成されるテンプレートをカスタマイズ
+rake log:clear :: ログファイルを削除
+rake db:create :: dababase.ymlの設定でデータベースを作成する
+rake db:create RAILS_ENV=production :: dababase.ymlの設定でデータベースを作成する
+rake db:create RAILS_ENV=test :: dababase.ymlの設定でデータベースを作成する
+rake db:create:all :: dababase.ymlの設定でデータベースを作成する
+rake db:drop :: dababase.ymlの設定でデータベースを削除する
+rake db:drop RAILS_ENV=production :: dababase.ymlの設定でデータベースを削除する
+rake db:drop RAILS_ENV=test :: dababase.ymlの設定でデータベースを削除する
+rake db:drop:all :: dababase.ymlの設定でデータベースを削除する
+
+rake db:migrate :: マイグレーションの実行
+rake db:migrate VERSION=:: マイグレーションの実行
+rake db:abort_if_pending_migrations :: 実行されていないmigrationを表示
+rake db:migrate:reset :: 
+rake db:migrate:redo STEP=1 :: 一つ前のバージョンに戻す
+rake db:migrate:up VERSION= :: 
+rake db:migrate:down VERSION= :: 
+rake db:migrate RAILS_ENV=production :: 実行環境でマイグレーション
+rake db:migrate RAILS_ENV=test :: テスト環境でマイグレーション
+rake db:migrate:status :: マイグレーションの履歴
+rake db:version :: スキーマのバージョンを調べる
+rake db:rollback :: ロールバック
+rake db:rollback STEP=1 :: ロールバック
+rake db:seed :: 初期データを投入(db/seeds.rb)
+
+rake db:schema:load :: スキーマファイルでデータベースを作成
+rake db:schema:dump :: 現在のデータベースからスキーマファイルを生成
+rake db:fixtures:load :: データベースにテストデータを挿入
+
+rake db:test:prepare :: 
+rake test :: 全てのテストを実行
+rake test:functionals :: ファンクショナルテストを実行
+rake test:integration :: インテグレレーションテストを実行
+rake test:units :: ユニットテストを実行
+raek test:recent :: 10分以内に更新されたファイルのテストを実行
+
+bundle init :: Gemfileを生成
+bundle install :: インストール(.rbenv/versions/バージョン名/lib/ruby/gemsいかにインストール)
+bundle install --path=vendor/bundle :: パス指定でインストール
+bundle install --without production :: 
+bundle install --without development test :: 
+bundle exec [command] :: 
+bundle list :: インストール済みのgemパッケージの一覧を表示
+bundle update :: インストール済みのgemパッケージのバージョンを更新

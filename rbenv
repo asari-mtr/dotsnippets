@@ -1,0 +1,10 @@
+rbenv --help :: ヘルプ
+rbenv --version :: バージョン確認
+rbenv install -l :: インストール可能バージョン表示
+rbenv install [version] :: インストール
+rbenv uninstall [version] :: アンインストール
+rbenv global [version] :: rubyのバージョン指定
+rbenv local [version] :: ディレクトリ別にのバージョン指定
+rbenv shell [version] :: 環境変数でバージョン確認
+rbenv version :: バージョン確認
+rbenv versions :: インストール済みrubyのバージョン確認

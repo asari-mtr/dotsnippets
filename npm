@@ -1,0 +1,28 @@
+npm init :: npmの初期化
+npm update :: パッケージをまとめてインストール/アップデート
+npm install [package_name] :: パッケージをインストール
+npm install --production :: パッケージをインストール(devDependenciesは除外)
+npm install -g [package_name] :: パッケージをインストール
+npm remove [package_name] :: パッケージをアンインストール
+npm remove -g [package_name] :: パッケージをアンインストール
+npm install --save [package_name] :: パッケージをインストール(package.jsonのdependenciesに書き込み)
+npm install --save-dev [package_name] :: 開発環境にパッケージをインストール(package.jsonのdevDependenciesに書き込み)
+npm install --save-optional [package_name] :: 開発環境にパッケージをインストール(package.jsonのoptionalDependenciesに書き込み)
+npm ls --depth=0 :: インストール済みパッケージを一覧表示(依存パッケージ非表示)
+npm ls -g --depth=0 :: インストール済みパッケージを一覧表示(依存パッケージ非表示)
+npm ls :: インストール済みパッケージを一覧表示(依存パッケージ表示)
+npm ls -g :: インストール済みパッケージを一覧表示(依存パッケージ表示)
+npm -v :: npmのバージョンを表示
+npm outdated :: 最新になっていないパッケージを一覧表示
+npm outdated -g :: 最新になっていないパッケージを一覧表示
+npm prune :: 未使用パッケージを削除
+npm prune -g :: 未使用パッケージを削除
+npm test :: テスト
+npm help [command] :: ヘルプ
+npm search :: パッケージを検索
+npm show [package_name] :: パッケージの詳細を表示
+npm update -g npm :: npm自体のアップデート
+npm root :: ローカルインストール先のディレクトリ確認
+npm root -g :: ローカルインストール先のディレクトリ確認
+npm bin :: ローカルインストール先のコマンドディレクトリ確認
+npm bin -g :: ローカルインストール先のコマンドディレクトリ確認
