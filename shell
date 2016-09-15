@@ -1,0 +1,49 @@
+sort | uniq -c | sort -nr :: データの出現語をランキングする
+grep -c "" :: 行数をカウントする(wc -l とほぼ同じ)
+grep -o [word] :: wordを抜き出す(grep -c ""と併用することで個数がわかる)
+tac :: catを逆にしたもの
+
+awk -F ' ' '{print $1}' :: 区切り文字を変更
+awk '/^#/{print $0}' :: 条件付き
+sed -e 's///' :: 置換
+sed -e 's///g' :: 全て置換
+sed -e 's///i' :: 大文字小文字を区別しない、置換
+sed -i -e 's/x/x/g' :: 置換して上書き
+
+grep -e [pattern] :: grep
+grep -v -e [pattern] :: 一致しない行を出力
+grep -H [pattern] [path] :: ファイル名をヘッダとして表示する
+grep -h [pattern] [path] :: ファイル名をヘッダとして表示しない
+grep -l [pattern] [path] :: 検索結果を含むファイル名のみを表示する
+grep -n [pattern] [path] :: 行番号をつける
+grep -R [pattern] [dir] :: ディレクトリから検索する
+grep -s [pattern] [path] :: エラーメッセージを表示しない
+grep -v [pattern] [path] :: マッチしない行を表示する
+grep -x [pattern] [path] :: 行全体を検索対象にする
+
+gibo :: 無視リストを作成
+gibo --list :: 無視リスト一覧を作成
+gibo -l | sed "/=/d" | tr "\t", "\n" | sed "/^$/d" | sort | peco | xargs gibo :: alias gibol
+
+tree . -L 1 :: ツリー表示
+
+brew install [formula] :: インストール
+brew uninstall [formula] :: アンインストール
+brew search [/text/] :: 検索
+brew list :: インストールされたformulaの一覧
+brew cleanup :: 古いバージョンを削除
+brew cleanup -n :: 消す対象を表示
+brew update :: Homebrewの更新
+brew upgrade [formula] :: formulaを更新
+brwe upgrade :: すべてのformulaを更新
+brew info [formula] :: formulaの情報を見る
+brew deps [fromula] :: 依存関係を見る
+brew depstree [fromula] :: 依存関係を見る
+brew link [formula] :: formulaの有効化
+brew unlink [formula] :: formulaの無効化
+brew doctor :: brewに問題がないか調べる
+brew prune :: デッドシンボリックリンクを削除する
+brew tap :: tapしたものの一覧
+brew tap [user/repository] :: tap
+brew untap [user/repository] :: untap
+

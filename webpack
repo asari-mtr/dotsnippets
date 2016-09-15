@@ -1,0 +1,7 @@
+# npm install webpack -g :: インストール
+# npm install webpack --save :: インストール
+webpack :: 起動
+webpack-dev-server :: サーバー起動 
+webpack-dev-server --inline :: サーバー起動
+webpack-dev-server --inline --hot :: サーバー起動
+

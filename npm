@@ -24,5 +24,6 @@ npm show [package_name] :: パッケージの詳細を表示
 npm update -g npm :: npm自体のアップデート
 npm root :: ローカルインストール先のディレクトリ確認
 npm root -g :: ローカルインストール先のディレクトリ確認
+npm run [script] :: package.jsonのscriptsを実行
 npm bin :: ローカルインストール先のコマンドディレクトリ確認
 npm bin -g :: ローカルインストール先のコマンドディレクトリ確認
