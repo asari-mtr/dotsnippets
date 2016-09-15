@@ -1,0 +1,34 @@
+git now :: とりあえずコミット
+
+git stash :: 一時保存
+git stash [message] :: 一時保存、メッセージ付き
+git stash list :: stashの一覧
+git stash list -p :: stashの一覧
+git stash show [stash] :: 詳細表示(stashを指定しない場合は直前)
+git stash apply [stash] :: stashの適用(stashを指定しない場合は直前)
+git stash drop [stash] :: stashの削除(stashを指定しない場合は直前)
+git stash pop [stash] :: 特定のstashを取得&削除(stashを指定しない場合は直前)
+git stash clear :: すべてのstashを削除する
+
+git branch [branchname] :: ブランチを作成
+git checkout [branchname] :: 作業ブランチを変更する(基本はmaster)
+git checokut -b [branchname] :: ブランチを作成して移動
+git branch :: ローカルブランチを確認
+git branch -r :: リモートブランチを確認
+git branch -a :: ローカル、リモートブランチを確認
+git branch -d [branchname] :: ブランチの削除
+git branch -D [branchname] :: ブランチの強制削除
+
+git merge [branchname] :: カレントブランチにマージする
+git merge --no-ff [branchname] :: マージコミットを作ってマージする
+
+git add :: 追加
+git add -p :: 一部追加
+git add . :: 全部追加
+git commit :: コミット
+git commit -ma :: 追加してコミット(ただし、新規ファイルは追加されない)
+git commit -m [comment] :: コメント付きコミット
+git commit --amend :: 直前のコミットを修正
+git commit --fixup [commit] :: squashしやすいコミットを作る(git rebase -i --autosquash HEAD~4)
+
+gti rebase -i --autosquash :: 自動でsquashの設定をしてrebaseする
