@@ -1,0 +1,19 @@
+vagrant init [name] [url] :: Vagrantの初期化
+vagrant list-commands :: コマンド一覧
+vagrant up :: vagrantの起動
+vagrant halt :: vagrantの終了
+vagrant ssh :: sshでログイン(vagrant/vagrant)
+vagrant ssh-config :: sshの設定を表示 
+vagrant status :: 状態確認
+vagrant reload :: 再起動
+vagrant resume :: 再接続
+vagrant suspend :: 一時停止
+vagrant version :: バージョン確認
+vagrant destroy :: 仮想マシンの削除
+vagrant box add ::
+vagrant box list :: boxの一覧を表示
+vagrant box outdated ::
+vagrant box remove [boxname] :: boxの削除
+vagrant box repackage ::
+vagrant box update ::
+vagrant help [command] :: ヘルプ

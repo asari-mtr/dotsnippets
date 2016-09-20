@@ -2,6 +2,8 @@ history -E 1 :: 履歴全部
 history -i :: 実行時間付き
 history -D :: 実行にかかった時間
 
+cd - :: 過去のディレクトリスタックに移動
+
 find . -name [name] :: nameファイルを検索
 find . -iname [name] :: nameファイルを検索(大文字小文字を区別しない)
 find . -regex [name] :: ファイル名が正規表現にマッチするものを表示
@@ -27,3 +29,4 @@ ps | less :: プロセス表示
 ps | peco :: プロセス表示
 ps -A | less :: 全てのプロセスを表示
 ps -A | peco:: 全てのプロセスを表示
+fc -ln 1 :: 履歴一覧

@@ -69,6 +69,10 @@ bundle install :: インストール(.rbenv/versions/バージョン名/lib/ruby
 bundle install --path=vendor/bundle :: パス指定でインストール
 bundle install --without production :: 
 bundle install --without development test :: 
-bundle exec [command] :: 
+bundle config :: 設定の確認
+bundle exec [command] :: bundleのパスを使用して実行
 bundle list :: インストール済みのgemパッケージの一覧を表示
 bundle update :: インストール済みのgemパッケージのバージョンを更新
+
+cap install :: capistranoの初期せっての作成
+cap -T :: capistranoのコマンド一覧

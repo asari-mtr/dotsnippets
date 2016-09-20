@@ -27,6 +27,20 @@ gibo -l | sed "/=/d" | tr "\t", "\n" | sed "/^$/d" | sort | peco | xargs gibo ::
 
 tree . -L 1 :: ツリー表示
 
+tmux source-file [filename] :: 設定ファイルの再読み込み
+tmux new-session :: 新規セッション
+tmux new-session -s [sessionname] :: 新規セッション(セッション名)
+tmux new-session -n [windowname] :: 新規セッション(ウィンドウ名)
+tmux list-sessions :: セッションの確認
+tmux list-clients :: クライアントの確認
+tmux attach :: 直前のセッションにアタッチする
+tmux attach -t [sessionno] :: セッションにアタッチする
+tmux kill-session :: 直前のセッションを削除する
+tmux kill-sesion -t [sessionno] :: セッションを削除する
+tmux kill-window :: すべてのセッションを削除する
+tmux list-commands :: すべてのコマンドを表示する
+tmux list-commands | peco :: すべてのコマンドを表示する
+
 brew install [formula] :: インストール
 brew uninstall [formula] :: アンインストール
 brew search [/text/] :: 検索
