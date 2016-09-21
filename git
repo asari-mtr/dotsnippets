@@ -1,5 +1,7 @@
 git now :: とりあえずコミット
 
+git status :: 状態を確認
+
 git stash :: 一時保存
 git stash [message] :: 一時保存、メッセージ付き
 git stash list :: stashの一覧
@@ -30,5 +32,19 @@ git commit -ma :: 追加してコミット(ただし、新規ファイルは追�
 git commit -m [comment] :: コメント付きコミット
 git commit --amend :: 直前のコミットを修正
 git commit --fixup [commit] :: squashしやすいコミットを作る(git rebase -i --autosquash HEAD~4)
+git commit --fixup ':/[comment]' :: squashしやすいコミットを作る(git rebase -i --autosquash HEAD~4)
 
 git rebase -i --autosquash :: 自動でsquashの設定をしてrebaseする
+git rebase --abort :: rebaseの中止
+git rebase --continue :: rebaseの継続
+
+git reflog :: 参照ログ一覧
+
+git bisect start [commit] :: 二分探索の開始
+git bisect reset :: 二分探索の終了
+git bisect bad :: 現在のコミットが壊れていることをマーク
+git bisect good :: 現在のコミットが正しいことをマーク
+git bisect skip :: 二分探索をスキップ
+
+git config --global alias.[alias] [command] :: gitのエイリアスを作成
+git config --global --list :: gitの設定一覧を表示
