@@ -12,7 +12,7 @@ git stash clear :: すべてのstashを削除する
 
 git branch [branchname] :: ブランチを作成
 git checkout [branchname] :: 作業ブランチを変更する(基本はmaster)
-git checokut -b [branchname] :: ブランチを作成して移動
+git checkout -b [branchname] :: ブランチを作成して移動
 git branch :: ローカルブランチを確認
 git branch -r :: リモートブランチを確認
 git branch -a :: ローカル、リモートブランチを確認
@@ -31,4 +31,4 @@ git commit -m [comment] :: コメント付きコミット
 git commit --amend :: 直前のコミットを修正
 git commit --fixup [commit] :: squashしやすいコミットを作る(git rebase -i --autosquash HEAD~4)
 
-gti rebase -i --autosquash :: 自動でsquashの設定をしてrebaseする
+git rebase -i --autosquash :: 自動でsquashの設定をしてrebaseする
