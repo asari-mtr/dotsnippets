@@ -17,3 +17,6 @@ vagrant box remove [boxname] :: boxの削除
 vagrant box repackage ::
 vagrant box update ::
 vagrant help [command] :: ヘルプ
+
+vagrant global-status :: すべてのvagrantの状態を表示する
+vagrant global-status -prune :: 無効なイメージ削除

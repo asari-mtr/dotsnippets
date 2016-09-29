@@ -61,3 +61,12 @@ brew tap :: tapしたものの一覧
 brew tap [user/repository] :: tap
 brew untap [user/repository] :: untap
 
+ack [keyword] :: keywordを検索する
+ack --ruby [keyword] :: ruby関連のファイルからkeywordを検索する(ruby部分はtypeを利用できる)
+ack --help-types :: typeの一覧
+ack -w [keyword] :: 単語の完全一致
+ack -i [keyword] :: 大文字小文字を区別しない
+ack -l [keyword] :: ファイル名のみ出力
+ack -C 5 [keyword] :: マッチした前後5行を表示
+ack --ignore-dir=[ignore-dir] [keyword] :: 無視するディレクトリ
+ack --ignore-file=[filter] [keyword] :: 無視するファイル

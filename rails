@@ -62,7 +62,8 @@ rake test :: 全てのテストを実行
 rake test:functionals :: ファンクショナルテストを実行
 rake test:integration :: インテグレレーションテストを実行
 rake test:units :: ユニットテストを実行
-raek test:recent :: 10分以内に更新されたファイルのテストを実行
+rake test:recent :: 10分以内に更新されたファイルのテストを実行
+rake routes :: routeの一覧を表示する(http://localhost:3000/rakes/info/routes でも見れる)
 
 bundle init :: Gemfileを生成
 bundle install :: インストール(.rbenv/versions/バージョン名/lib/ruby/gemsいかにインストール)
@@ -76,5 +77,26 @@ bundle update :: インストール済みのgemパッケージのバージョン
 bundle show [gem] :: gemのパスを表示してくれる
 bundle open [gem] :: gemのパスを開く
 
-cap install :: capistranoの初期せっての作成
+cap install :: capistranoの初期設定の作成
+cap install STAGES=[local,sandbox,qa,production,etc...] :: capistranoの設定の作成、stageを指定
+cap _stage_ deploy :: stageをデプロイ
+cap _stage_ deploy --dry-run :: stageをデプロイ(dry-run)
+cap _stage_ deploy --prereqs :: stageの依存関係を表示(実行されない)
+cap _stage_ deploy --trace :: 実行状況の詳細を表示
+cap _stage_ deploy --print-config-variables :: deployタスクのconfig変数を表示 
 cap -T :: capistranoのコマンド一覧
+
+foreman start :: Procfileを使って起動
+foreman start -f [filename] :: filenameのProcfileを使って起動
+foreman start -p [port] :: 指定されたportで起動
+foreman run [command] :: 任意のコマンドを実行する
+foreman check :: Procfileのフォーマットをチェックする
+foreman version :: バージョン確認
+
+guard :: guardの起動
+guard -i :: 対話モードをなしで起動
+
+whenever --update-crontab [RAILS_ENV=production] :: crontabに設定を反映
+whenever --clear-crontab [RAILS_ENV=production] :: crontabから設定を削除
+whenever --help :: ヘルプを表示
+

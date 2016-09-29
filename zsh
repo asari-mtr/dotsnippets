@@ -22,6 +22,7 @@ curl -O [url] :: データを保存する
 curl -L [url] :: リダイレクトする
 curl -Ss [url] :: サイレントモードで実行(s),エラーは表示する(S)
 curl -v [url] :: デバッグ
+curl -d [param] -k -L -x socks5://localhost:10080 [url] :: リダイレクトあり、プロキシ、post 
 
 scirpt [filename] :: キー操作を記録する(終了はexistかCtrl+D)
 htop :: topの進化版
