@@ -1,0 +1,43 @@
+docker vrsion :: バージョン
+docker info :: 情報表示
+docker search [image] :: イメージの検索
+docker ps :: コンテの表示
+docker ps -a -s :: 停止も含むすべてのコンテナ、サイズ表示
+docker ps -l -q :: 直前に起動したコンテナIDを取得
+
+docker run [image] [command] [args] ::
+docker run -d -p 80:80 --name [name] [image] :: デーモン、ポート指定で起動
+docker run -d --link [container:alias] ::
+docker run -d --net [networkname] ::
+docker run -i -t -p 80:80 --name [name] [image] :: インタラクティブモードで起動
+docker run -c 200 [image] :: CPUの相対使用量指定
+docker run -m 512m [image] :: メモリ使用量指定(b,k,m,g)
+docker run -v [host:container] :: ホストディレクトリをコンテナにマウントする(絶対パス)
+docker start [containerId] :: コンテナを起動する
+docker start -a [containerId] :: コンテナを起動してログイン
+docker restart [containerId] :: コンテナを再起動
+docker stop [containerId] :: コンテナを終了
+docker kill [containerId] :: コンテナを強制終了
+docker attach [containerId] :: コンテナにアタッチ
+docker exec -it [containerId] [command] :: コンテナにプロセスの追加
+docker top [containerId] :: プロセスを表示
+docker logs -f [containerId] :: ログを表示
+docker inspect [containerId] :: コンテナの表示
+docker rm [containerId] :: コンテナの削除
+docker rm `docker ps -a -q` :: 停止中のコンテナを削除する
+
+docker images :: イメージの一覧
+docker pull [image] ::
+docker pull [image:tag] ::
+docker rmi [imageId] :: イメージの削除
+
+docker diff [container] :: イメージの差分
+docker commit [container] [imagename] :: コンテナを保存
+docker network ls :: ネットワーク一覧
+docker network create [networkname] :: ネットワークの作成
+docker network rm [networkname] :: ネットワークの削除
+docker port [containerId] :: マッピングされているポート一覧
+
+docker-machine ls ::
+
+docker-compose up ::

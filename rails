@@ -64,6 +64,23 @@ rake test:integration :: インテグレレーションテストを実行
 rake test:units :: ユニットテストを実行
 rake test:recent :: 10分以内に更新されたファイルのテストを実行
 rake routes :: routeの一覧を表示する(http://localhost:3000/rakes/info/routes でも見れる)
+rake tmp:clear :: tmpディレクトリのクリア 
+rake tmp:create :: tmpディレクトリの作成
+rake stats :: プロジェクトの統計情報
+rake secrete :: シークレットキーの生成
+rake log:clear :: logディレクトリのクリア 
+
+gem install [gem] :: gemインストール
+gem list :: gem一覧
+gem list --local :: gem一覧
+gem pristine :: gem の隠し場所にあるファイルからインストールしたgemを初期状態に戻す 
+gem pristine -all :: gem の隠し場所にあるファイルからインストールしたgemを初期状態に戻す 
+gem uninstall -I -a -x --user-install --force :: gemを全部消す
+gem which [gem] :: ライブラリの場所を探す
+gem specification [gem] :: yamlでgemの詳細情報を表示する
+gem dependency [gem] :: 依存関係を表示する
+gem env :: バージョン確認
+gem outdated :: アップデートが必要なすべてのgemを表示する
 
 bundle init :: Gemfileを生成
 bundle install :: インストール(.rbenv/versions/バージョン名/lib/ruby/gemsいかにインストール)
