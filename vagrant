@@ -3,6 +3,7 @@ vagrant list-commands :: コマンド一覧
 vagrant up :: vagrantの起動
 vagrant halt :: vagrantの終了
 vagrant ssh :: sshでログイン(vagrant/vagrant)
+vagrant ssh -c [command] :: sshでログイン、コマンドを実行後切断
 vagrant ssh-config :: sshの設定を表示 
 vagrant status :: 状態確認
 vagrant reload :: 再起動
