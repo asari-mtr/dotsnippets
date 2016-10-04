@@ -1,0 +1,18 @@
+systemctl start [unit] :: サービスの開始
+systemctl stop [unit] :: サービスの停止
+systemctl restart [unit] :: サービスの再起動
+systemctl reload [unit] :: サービスの設定反映
+systemctl status [unit] :: サービスの状態確認
+systemctl enable [unit] :: サービスを自動起動する
+systemctl disable [unit] :: サービスを自動起動しない
+systemctl list-unit-files --type service :: サービスの状態を一覧表示
+
+firewall-cmd --list-all :: firewallの設定確認
+firewall-cmd --add-port=80/tcp -permanent
+
+yum search [keyword] :: packageの検索
+yum list installed :: インストール済み一覧
+yum remove -y [pakcage] :: アンインストール
+yum install -y [package] :: インストール
+
+cat /etc/redhat-release :: CentOSのバージョン確認
