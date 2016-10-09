@@ -72,3 +72,27 @@ ack -l [keyword] :: ファイル名のみ出力
 ack -C 5 [keyword] :: マッチした前後5行を表示
 ack --ignore-dir=[ignore-dir] [keyword] :: 無視するディレクトリ
 ack --ignore-file=[filter] [keyword] :: 無視するファイル
+
+pgrep [process] :: プロセスidを検索
+pgrep -f [process] :: プロセスidを検索(引数も検索対象にする)
+pgrep -fl [process] :: プロセスidを検索(引数も検索対象にする)、詳細も表示
+
+pkill [process] :: pgrepした結果をすべてkill
+pkill -f [process] :: pgrepした結果をすべてkill(引数も検索対象)
+
+ssh [hostname] ::
+ssh -D [port] [hostname] :: dynamic port forwarding
+ssh -fN [hostname] :: バックグランウンドで起動
+
+nginx :: 起動
+nginx -h :: ヘルプ
+nginx -v :: バージョン
+nginx -V :: バージョン、コンフィルオプション表示
+nginx -s stop :: 停止
+nginx -s reload :: 再起動
+nginx -s quit :: 
+nginx -s reopen :: 
+nginx -c [filename] :: コンフィグファイルを指定
+nginx -t :: 設定ファイルのチェック
+
+lsof -i :80 :: 80ポートを使用しているプロセスを探す

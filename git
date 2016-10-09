@@ -48,3 +48,6 @@ git bisect skip :: 二分探索をスキップ
 
 git config --global alias.[alias] [command] :: gitのエイリアスを作成
 git config --global --list :: gitの設定一覧を表示
+
+git diff :: HEADと比較
+git diff --name-only [commit] :: 差分をファイル名だけで表示

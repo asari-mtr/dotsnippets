@@ -1,6 +1,7 @@
 vagrant init [name] [url] :: Vagrantの初期化
 vagrant list-commands :: コマンド一覧
 vagrant up :: vagrantの起動
+vagrant up --provision :: vagrantの起動、provision
 vagrant halt :: vagrantの終了
 vagrant ssh :: sshでログイン(vagrant/vagrant)
 vagrant ssh -c [command] :: sshでログイン、コマンドを実行後切断
