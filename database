@@ -1,0 +1,25 @@
+pg_ctl --help :: ヘルプ
+pg_ctl start :: postgreSQL起動(export PGDATA=/usr/local/var/postgres、環境変数がない場合は-Dで指定する必要がある)
+pg_ctl start -l [logfilepath] :: postgreSQL起動
+pg_ctl stop :: postgreSQL停止
+pg_ctl restart :: postgreSQL再スタート
+pg_ctl reload :: postgreSQL再読み込み
+
+postgres -v :: バージョン確認
+postgres --help :: ヘルプ
+postgres -D /user/local/bar/postgres/ :: 起動
+
+psql -l :: データベース一覧
+psql -U [username] :: ユーザ指定でログイン
+psql -U [username] [databasename] :: ユーザ指定でログイン
+psql -q -c 'select * from pg_user' [username] :: ユーザの確認
+
+createuser -P [username] :: ユーザー作成
+createuser --username=postgres --createdb --encrypted --inherit --login --pwprompt --createrole --superuser [username] :: --usernameは環境により変更
+dorpuser [username] :: ユーザーの削除
+
+createdb [databasename] -O [user] :: データベース作成
+createdb --username=postgres --encoding=UTF8 --locale=ja_JP.UTF-8 --owner=dmpng --template=template0 [databasename] :: データベースの作成
+dropdb [databasename] :: データベース削除
+
+initdb /usr/local/var/postgres -E utf-8 --no-locale :: データベースの初期化
