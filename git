@@ -17,9 +17,11 @@ git checkout [branchname] :: 作業ブランチを変更する(基本はmaster)
 git checkout -b [branchname] :: ブランチを作成して移動
 git branch :: ローカルブランチを確認
 git branch -r :: リモートブランチを確認
+git branch -r --list --merged :: マージ済みリモートブランチの表示
 git branch -a :: ローカル、リモートブランチを確認
 git branch -d [branchname] :: ブランチの削除
 git branch -D [branchname] :: ブランチの強制削除
+git branch --list --merged :: マージ済みブランチの一覧表示
 
 git merge [branchname] :: カレントブランチにマージする
 git merge --no-ff [branchname] :: マージコミットを作ってマージする
@@ -51,3 +53,5 @@ git config --global --list :: gitの設定一覧を表示
 
 git diff :: HEADと比較
 git diff --name-only [commit] :: 差分をファイル名だけで表示
+
+git remote prune origin :: 削除されたリモートブランチの同期
