@@ -63,6 +63,13 @@ brew tap :: tapしたものの一覧
 brew tap [user/repository] :: tap
 brew untap [user/repository] :: untap
 
+brew services :: ヘルプ
+brew services list :: brewでインストールしたサービスの一覧
+brew services start [formula] :: サービス開始
+brew services stop [formula] :: サービス停止
+brew services restart [formula] :: サービス再起動
+brew services cleanup [formula] :: クリーンアップ
+
 ack [keyword] :: keywordを検索する
 ack --ruby [keyword] :: ruby関連のファイルからkeywordを検索する(ruby部分はtypeを利用できる)
 ack --help-types :: typeの一覧
