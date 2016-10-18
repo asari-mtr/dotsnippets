@@ -103,3 +103,7 @@ nginx -c [filename] :: コンフィグファイルを指定
 nginx -t :: 設定ファイルのチェック
 
 lsof -i :80 :: 80ポートを使用しているプロセスを探す
+
+crontab -l :: cronの設定を確認
+crontab -e :: cronの設定を編集(分 時 日 月 曜日 <コマンド>)
+crontab -r :: cronの設定を削除
