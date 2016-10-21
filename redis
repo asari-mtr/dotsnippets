@@ -1,0 +1,5 @@
+redis-cli :: redisをcliで実行
+redis-cli keys "*" :: すべてのキーを表示
+redis-cli type [key] :: キーのタイプを表示
+redis-cli help :: ヘルプ
+redis-cli monitor :: redisのログ出力
