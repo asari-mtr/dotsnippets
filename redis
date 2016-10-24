@@ -1,5 +1,9 @@
 redis-cli :: redisをcliで実行
 redis-cli keys "*" :: すべてのキーを表示
 redis-cli type [key] :: キーのタイプを表示
+redis-cli dbsize :: キーの数を取得
+redis-cli bgsave :: バックアップ
+redis-cli lastsave :: バックアップの進捗確認(timestampが返される)
+redis-cli lastsave | awk '{print $2}' | date -I'seconds' -u :: バックアップ日時を読みやすく表示
 redis-cli help :: ヘルプ
 redis-cli monitor :: redisのログ出力
