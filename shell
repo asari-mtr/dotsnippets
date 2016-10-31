@@ -97,8 +97,8 @@ nginx -v :: バージョン
 nginx -V :: バージョン、コンフィルオプション表示
 nginx -s stop :: 停止
 nginx -s reload :: 再起動
-nginx -s quit :: 
-nginx -s reopen :: 
+nginx -s quit ::
+nginx -s reopen ::
 nginx -c [filename] :: コンフィグファイルを指定
 nginx -t :: 設定ファイルのチェック
 
@@ -109,3 +109,8 @@ crontab -e :: cronの設定を編集(分 時 日 月 曜日 <コマンド>)
 crontab -r :: cronの設定を削除
 
 ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R . :: railsのctagsを作る
+
+scp [user@localHost:/remote/path] [/local/path] :: リモートからローカルにコピー
+scp [/local/host] [user@localHost:/remote/path] :: ローカルからリモートにコピー
+scp -r [from/path] [to/path] :: ディレクトリごとコピーする
+scp -i [/secretkey] :: 秘密鍵を使う
