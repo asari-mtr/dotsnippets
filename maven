@@ -1,0 +1,18 @@
+mvn install :: ローカルリポジトリへのインストール
+mvn install -Dmaven.test.skip=true :: インストール(テストスキップ)
+mvn install -Dmaven.test.skip=true -pl [project] :: インストール(テストスキップ)、プロジェクトを指定(マルチプロジェクトの場合)
+mvn compile :: コンパイル
+mvn clean :: クリーン
+mvn dependency:tree :: 依存関係ツリーを表示
+mvn version:display-dependency-updates :: 利用可能な最新ライブラリの調査
+mvn dependency:copy-dependencies :: 依存jarを/target/dependencyに配置
+
+mvn archetype:generate :: プロジェクトの作成
+mvn site :: サイトの作成
+mvn package :: jarの作成
+mvn deploy :: リモートリポジトリへの配置
+mvn javadoc:javadoc :: javadocの作成
+mvn validate :: 検証
+mvn test :: テスト
+mvn integration-test :: インテグレーションテスト
+mvn verify :: 確認
