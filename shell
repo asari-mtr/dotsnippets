@@ -42,6 +42,8 @@ tmux list-commands :: すべてのコマンドを表示する
 tmux list-commands | peco :: すべてのコマンドを表示する
 tmux join-pane -t [window.pane] :: panelを所定のwindowに移動する
 tmux join-pane -s [window.pane] :: panelを現在のwindowに持ってくる
+tmux join-window -t [window.pane] :: windowを所定のwindowに移動する
+tmux join-window -s [window.pane] :: windowを現在のwindowに持ってくる
 
 brew install [formula] :: インストール
 brew uninstall [formula] :: アンインストール
