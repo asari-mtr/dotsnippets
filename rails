@@ -11,8 +11,8 @@ rails dbconsole test ::
 rails dbconsole development ::
 rails dbconsole production ::
 rails generate scaffold [MODEL_NAME] [column_name:type] ::
-rails generate model [ModelName] [column_name:type] :: 
-rails generate controller [ControllerName] [action_name] :: 
+rails generate model [ModelName] [column_name:type] ::
+rails generate controller [ControllerName] [action_name] ::
 rails generate scaffold_controller [ModelName] :: モデル作成済みの場合に使用
 rails generate migration [AddColumnToModels] [column_name:type] ::
 rails generate migration [RemoveColumnFromModels] [column_name:type] ::
@@ -41,10 +41,10 @@ rake db:drop:all :: dababase.ymlの設定でデータベースを削除する
 rake db:migrate :: マイグレーションの実行
 rake db:migrate VERSION=:: マイグレーションの実行
 rake db:abort_if_pending_migrations :: 実行されていないmigrationを表示
-rake db:migrate:reset :: 
+rake db:migrate:reset :: データベースの削除後、データベースの作成、マイグレーションの実行、初期データの登録をする
 rake db:migrate:redo STEP=1 :: 一つ前のバージョンに戻す
-rake db:migrate:up VERSION= :: 
-rake db:migrate:down VERSION= :: 
+rake db:migrate:up VERSION= ::
+rake db:migrate:down VERSION= ::
 rake db:migrate RAILS_ENV=production :: 実行環境でマイグレーション
 rake db:migrate RAILS_ENV=test :: テスト環境でマイグレーション
 rake db:migrate:status :: マイグレーションの履歴
@@ -52,29 +52,30 @@ rake db:version :: スキーマのバージョンを調べる
 rake db:rollback :: ロールバック
 rake db:rollback STEP=1 :: ロールバック
 rake db:seed :: 初期データを投入(db/seeds.rb)
+rake db:setup :: データベースの作成、マイグレーションの実行、初期データの登録をする
 
 rake db:schema:load :: スキーマファイルでデータベースを作成
 rake db:schema:dump :: 現在のデータベースからスキーマファイルを生成
 rake db:fixtures:load :: データベースにテストデータを挿入
 
-rake db:test:prepare :: 
+rake db:test:prepare ::
 rake test :: 全てのテストを実行
 rake test:functionals :: ファンクショナルテストを実行
 rake test:integration :: インテグレレーションテストを実行
 rake test:units :: ユニットテストを実行
 rake test:recent :: 10分以内に更新されたファイルのテストを実行
 rake routes :: routeの一覧を表示する(http://localhost:3000/rakes/info/routes でも見れる)
-rake tmp:clear :: tmpディレクトリのクリア 
+rake tmp:clear :: tmpディレクトリのクリア
 rake tmp:create :: tmpディレクトリの作成
 rake stats :: プロジェクトの統計情報
 rake secrete :: シークレットキーの生成
-rake log:clear :: logディレクトリのクリア 
+rake log:clear :: logディレクトリのクリア
 
 gem install [gem] :: gemインストール
 gem list :: gem一覧
 gem list --local :: gem一覧
-gem pristine :: gem の隠し場所にあるファイルからインストールしたgemを初期状態に戻す 
-gem pristine -all :: gem の隠し場所にあるファイルからインストールしたgemを初期状態に戻す 
+gem pristine :: gem の隠し場所にあるファイルからインストールしたgemを初期状態に戻す
+gem pristine -all :: gem の隠し場所にあるファイルからインストールしたgemを初期状態に戻す
 gem uninstall -I -a -x --user-install --force :: gemを全部消す
 gem which [gem] :: ライブラリの場所を探す
 gem specification [gem] :: yamlでgemの詳細情報を表示する
@@ -85,8 +86,8 @@ gem outdated :: アップデートが必要なすべてのgemを表示する
 bundle init :: Gemfileを生成
 bundle install :: インストール(.rbenv/versions/バージョン名/lib/ruby/gemsいかにインストール)
 bundle install --path=vendor/bundle :: パス指定でインストール
-bundle install --without production :: 
-bundle install --without development test :: 
+bundle install --without production ::
+bundle install --without development test ::
 bundle config :: 設定の確認
 bundle exec [command] :: bundleのパスを使用して実行
 bundle list :: インストール済みのgemパッケージの一覧を表示
@@ -100,7 +101,7 @@ cap _stage_ deploy :: stageをデプロイ
 cap _stage_ deploy --dry-run :: stageをデプロイ(dry-run)
 cap _stage_ deploy --prereqs :: stageの依存関係を表示(実行されない)
 cap _stage_ deploy --trace :: 実行状況の詳細を表示
-cap _stage_ deploy --print-config-variables :: deployタスクのconfig変数を表示 
+cap _stage_ deploy --print-config-variables :: deployタスクのconfig変数を表示
 cap -T :: capistranoのコマンド一覧
 
 foreman start :: Procfileを使って起動
