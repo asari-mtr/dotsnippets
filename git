@@ -39,6 +39,7 @@ git commit --fixup ':/[comment]' :: squashしやすいコミットを作る(git 
 git rebase -i --autosquash :: 自動でsquashの設定をしてrebaseする
 git rebase --abort :: rebaseの中止
 git rebase --continue :: rebaseの継続
+git rebase --onto [newbase] [upstream] [branch]: ブランチの移動(upstreamを起点としてbranchをnewbaseに移動する)
 
 git reflog :: 参照ログ一覧
 
