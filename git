@@ -15,6 +15,7 @@ git stash clear :: すべてのstashを削除する
 git branch [branchname] :: ブランチを作成
 git checkout [branchname] :: 作業ブランチを変更する(基本はmaster)
 git checkout -b [branchname] :: ブランチを作成して移動
+git checkout - :: 前回使ってたブランチに移動
 git branch :: ローカルブランチを確認
 git branch -r :: リモートブランチを確認
 git branch -r --list --merged :: マージ済みリモートブランチの表示
@@ -56,3 +57,11 @@ git diff :: HEADと比較
 git diff --name-only [commit] :: 差分をファイル名だけで表示
 
 git remote prune origin :: 削除されたリモートブランチの同期
+
+git log --grep [word] [commit] :: コミットログの検索
+git log --grep -n [num] [word] [commit] :: コミットログの検索
+git log --graph --oneline [commit] :: グラフを一行で
+git log --graph --oneline --decorate [commit] :: グラフ表示でブランチ名表示
+
+git rev-parse [commit] :: ハッシュ値を取得する
+git rev-parse --short [commit] :: ハッシュ値を取得する(8文字)
